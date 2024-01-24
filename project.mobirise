@@ -1,0 +1,171 @@
+{
+  "settings": {
+    "name": "velodrome finance 2",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "startm5",
+      "title": "StartM5",
+      "titlePreset": "StartM5",
+      "styling": {
+        "primaryColor": "#9fe870",
+        "secondaryColor": "#ffd7ef",
+        "successColor": "#3a341c",
+        "infoColor": "#320707",
+        "warningColor": "#a0e2e1",
+        "dangerColor": "#ffea64",
+        "mainFont": "Inter Tight",
+        "display1Font": "Inter Tight",
+        "display1Size": 5,
+        "display2Font": "Inter Tight",
+        "display2Size": 4,
+        "display5Font": "Inter Tight",
+        "display5Size": 2.5,
+        "display7Font": "Inter Tight",
+        "display7Size": 1.4,
+        "display4Font": "Inter Tight",
+        "display4Size": 1.2,
+        "isRoundedImages": true,
+        "isRoundedButtons": true,
+        "isLargeButtons": true,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      }
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.9.0",
+    "siteFonts": [
+      {
+        "css": "'Inter Tight', sans-serif",
+        "name": "Inter Tight",
+        "url": "https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i"
+      }
+    ],
+    "favicon": "@PROJECT_PATH@/assets/images/velodrome.png",
+    "sitemapSwitcher": true,
+    "siteUrl": "https://velodrome-velodrome.github.io/",
+    "sitemapSwitcherAuto": "on",
+    "robotsSwitcher": true,
+    "robotsText": "User-agent: *\nDisallow: /cgi-bin\nSitemap: https://velodrome-velodrome.github.io/sitemap.xml\n\n\n",
+    "mbrsiteDomain": "xcmvhy2crz",
+    "imageResize": false,
+    "usedWebp": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "uniqCompNum": 2,
+    "versionPublish": "5.9.0"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Velodrome Finance™ | Home Official Site",
+        "meta_descr": "Velodrome Finance is a next-generation AMM that combines the best of Curve, Convex and Uniswap, designed to serve as Optimism's central liquidity hub.",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".row": {
+              "flex-direction": "row-reverse"
+            }
+          },
+          "_name": "image01",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"image1\" group=\"Images & Videos\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-fullscreen': fullScreen,\n                    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"2\" condition=\"fullScreen == false\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\" condition=\"fullScreen == false\">\n    <input type=\"range\" name=\"textWidth\" title=\"Image\" min=\"4\" max=\"12\" step=\"1\" value=\"12\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n      <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background13.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"col-12 col-lg-{{textWidth}}\">\n        <div class=\"image-wrapper mb-4\">\n          <img class=\"w-100\" src=\"@PROJECT_PATH@/assets/images/31899.webp\" alt=\"velodrome finance\">\n        </div>\n        <h4 class=\"mbr-description mbr-fonts-style mb-3 align-center\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-description\"><b>Velodrome Finance™ | Home Official Site</b></h4>\n        <p class=\"mbr-description mbr-fonts-style mb-0 align-center\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-description\">\n          Unleash your creativity and sew your way to endless possibilities.\n        </p>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "u1IfXxd1iJ",
+          "_anchor": "image01-0",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".card-wrapper": {
+              "background": "@wrapBgColor",
+              "@media (max-width: 767px)": {
+                "padding": "1.5rem"
+              },
+              "@media (min-width: 768px)": {
+                "padding": "2.25rem"
+              }
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#000000",
+              "text-align": "left"
+            },
+            ".card-title, .card-box": {
+              "text-align": "left",
+              "color": "#000000"
+            }
+          },
+          "_name": "article07",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article07\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"0\">\n    <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"8\" max=\"12\" step=\"1\" value=\"12\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n    <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#ffffff\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n      <input type=\"color\" title=\"Color\" value=\"#edefeb\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"card col-md-12 col-lg-{{contentWidth}}\">\n        <div class=\"card-wrapper\">\n          <h3 class=\"card-title mbr-fonts-style mbr-white mt-3 mb-4\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-box\"><b>Velodrome Finance: Revolutionizing Derivatives Trading on the Blockchain</b></h3>\n          <div class=\"row card-box align-left\">\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\">\n                  <b>Introduction</b>\n                </h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">The world of decentralized finance (DeFi) continues to push boundaries, introducing innovative solutions that disrupt traditional financial systems. Among these groundbreaking platforms, Velodrome Finance stands out as a pioneer in the realm of derivatives trading on the blockchain. Leveraging the power and transparency of blockchain technology, Velodrome Finance offers users a decentralized derivatives protocol that is efficient, secure, and accessible. In this article, we will explore the features, benefits, and potential impact of <a href=\"https://velodrome-velodrome.github.io/\" class=\"text-primary\">Velodrome Finance</a> in revolutionizing derivatives trading in the DeFi landscape.<br></p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Understanding Velodrome Finance</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><a href=\"https://velodrome.finance/\" class=\"text-primary\">Velodrome Finance</a> is a decentralized derivatives trading platform built on a blockchain network. It allows users to create, trade, and settle derivatives contracts in a secure and transparent manner. By utilizing the advantages of blockchain technology, Velodrome Finance aims to eliminate intermediaries, reduce counterparty risk, and provide a more efficient and inclusive derivatives trading experience.<br></p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>The Power of Blockchain Technology</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Velodrome Finance's strength lies in its utilization of blockchain technology. By leveraging blockchain, the platform offers several key advantages that revolutionize the derivatives trading landscape:\n<br>\n<br>a. Transparency and Immutability: Blockchain provides a transparent and immutable ledger, enabling all transactions and contract details to be recorded and verified. This transparency eliminates the need for intermediaries and reduces the risk of manipulation or fraud.\n<br>\n<br>b. Security and Trust: Blockchain's decentralized nature enhances the security and trustworthiness of Velodrome Finance. The platform's smart contracts are executed automatically, ensuring that trades are settled without the need for intermediaries, thus minimizing the risk of human error or manipulation.\n<br>\n<br>c. Accessibility and Inclusivity: Blockchain-based derivatives trading platforms like Velodrome Finance offer greater accessibility to a global audience. Users can participate in derivatives trading without the need for third-party approvals, geographical restrictions, or costly intermediaries. This inclusivity opens up opportunities for traders worldwide, regardless of their background or location.\n<br>\n<br>d. Efficiency and Cost-effectiveness: Blockchain's automated execution and elimination of intermediaries streamline the derivatives trading process, reducing costs and increasing efficiency. Velodrome Finance leverages these advantages to offer traders faster settlement times, lower fees, and improved liquidity.<br></p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Key Features and Benefits of Velodrome Finance</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Velodrome Finance provides several unique features and benefits that set it apart from traditional derivatives trading platforms and even other DeFi protocols:&nbsp;<br><br>a. Decentralized Derivatives Marketplace: Velodrome Finance enables users to create, trade, and settle derivatives contracts directly on the platform. This decentralized approach eliminates the need for intermediaries, reducing costs and counterparty risk.\n<br>\n<br>b. Customizable Derivatives Contracts: Velodrome Finance allows users to create and customize their own derivatives contracts, tailoring them to their specific trading strategies and risk appetite. This flexibility empowers traders to design contracts that meet their individual needs, enhancing their trading experience.\n<br>\n<br>c. Automated Settlement and Margining: Velodrome Finance leverages smart contracts to automate the settlement and margining processes. This eliminates the need for manual intervention and ensures accurate and timely settlement of trades, reducing the risk of errors and disputes.\n<br>\n<br>d. Minimal Slippage and Improved Liquidity: Velodrome Finance's decentralized marketplace aggregates liquidity from multiple sources, resulting in enhanced liquidity depth and reduced slippage. Traders can execute trades at competitive prices, even for large orders, without significantly impacting the market.\n<br>\n<br>e. Non-Custodial Approach: Velodrome Finance follows a non-custodial model, meaning users retain full control over their funds throughout the trading process. This approach aligns with the core principles of decentralization and security, giving users peace of mind and reducing the risk of fund loss or mismanagement.<br></p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>The Impact of Velodrome Finance on Derivatives Trading</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Velodrome Finance's emergence has significant implications for the derivatives trading landscape, both within the DeFi ecosystem and beyond:<br><br>a. Democratizing Derivatives Trading: By providing a decentralized derivatives marketplace, Velodrome Finance democratizes access to derivatives trading. It allows anyone with an internet connection and a compatible wallet to participate, removing traditional barriers such as geographical restrictions, high entry costs, and complex regulatory frameworks.\n<br>\n<br>b. Enhanced Efficiency and Liquidity: Velodrome Finance's automated settlement and margining processes, combined with its liquidity aggregation, contribute to improved efficiency and liquidity in derivatives trading. This fosters a more vibrant and active market, attracting traders and increasing overall trading volumes.\n<br>\n<br>c. Mitigation of Counterparty Risk: Velodrome Finance's decentralized model significantly reduces counterparty risk. The use of smart contracts ensures that trades are settled automatically, removing the need for trust in a centralized entity. This mitigates the risk of defaults, defaults, and other counterparty-related issues that can arise in traditional derivatives trading.\n<br>\n<br>d. Innovation Catalyst: Velodrome Finance's novel approach to derivatives trading inspires other projects to explore new possibilities within the DeFi sector. Its success serves as a catalyst for further innovation, encouraging the development of new protocols and services that leverage the benefits of blockchain technology for derivatives trading.\n<br>\n<br>e. Regulatory and Compliance Advancements: As decentralized derivatives trading gains traction, regulators and policymakers are taking note. The emergence of platforms like Velodrome Finance prompts discussions and advancements in regulatory frameworks to ensure investor protection and market integrity. This collaborative approach between the DeFi industry and regulators can lead to a more balanced and inclusive derivatives trading ecosystem.&nbsp;<br></p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Conclusion</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Velodrome Finance is at the forefront of revolutionizing derivatives trading in the DeFi space. By leveraging blockchain technology, the platform offers users a decentralized, transparent, and efficient marketplace for creating, trading, and settling derivatives contracts. With its customizable contracts, automated settlement processes, and enhanced liquidity, Velodrome Finance provides traders with a secure and inclusive environment to engage in derivatives trading.\n<br>\n<br>The power of blockchain technology enables Velodrome Finance to eliminate intermediaries, reduce counterparty risk, and increase accessibility, ultimately democratizing derivatives trading. Its impact extends beyond the DeFi ecosystem, pushing for regulatory advancements and inspiring further innovation in the derivatives trading space.\n<br>\n<br>As Velodrome Finance continues to evolve and attract more users, its influence on the derivatives trading landscape is poised to grow significantly. By empowering traders with greater control, transparency, and efficiency, Velodrome Finance paves the way for a more inclusive and decentralized financial future. With the potential to reshape traditional finance and foster new opportunities, Velodrome Finance stands as a trailblazer in revolutionizing derivatives trading on the blockchain.<br></p>\n              </div>\n            </div>\n            \n          </div>\n          <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n            <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Start Now</a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "u1IfYDUYir",
+          "_anchor": "article07-1",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
